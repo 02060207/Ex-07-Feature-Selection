@@ -25,7 +25,7 @@ Save the data to the file
 
 NAME: sivakumar A
 REG NO: 212220043004
-
+```
 from sklearn.datasets import load_boston
 boston_data=load_boston()
 import pandas as pd
@@ -58,7 +58,8 @@ X = X.drop(columns = ['NOX','CHAS'])
 y_pred = cross_val_predict(classifier_pipeline, X, y, cv=cv)
 print("RMSE: " + str(round(sqrt(mean_squared_error(y,y_pred)),2)))
 print("R_squared: " + str(round(r2_score(y,y_pred),2)))
-
+```
+```
 ### Filter Features by Correlation
 
 import seaborn as sn
@@ -81,7 +82,8 @@ for val in vals:
     y_pred = cross_val_predict(classifier_pipeline, X, y, cv=cv)
     print("RMSE: " + str(round(sqrt(mean_squared_error(y,y_pred)),2)))
     print("R_squared: " + str(round(r2_score(y,y_pred),2)))
-
+```
+```
 ### Feature Selection Using a Wrapper
 
 boston = pd.DataFrame(boston_data.data, columns=boston_data.feature_names)
@@ -136,7 +138,7 @@ X = boston.drop(columns='MEDV')[['CRIM','RM','PTRATIO','LSTAT']]
 y_pred = cross_val_predict(classifier_pipeline, X, y, cv=cv)
 print("RMSE: " + str(round(sqrt(mean_squared_error(y,y_pred)),3)))
 print("R_squared: " + str(round(r2_score(y,y_pred),3)))
-
+```
 ## OUPUT:
 
 ### Read the given dataset;
